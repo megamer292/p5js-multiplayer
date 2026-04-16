@@ -13,7 +13,7 @@ socket.on("positions", listy=>{
 
 function setup() {
 
-	createCanvas(windowWidth, windowHeight);
+	createCanvas(window.innerWidth, window.innerHeight);
 	background(100);
 }
 
