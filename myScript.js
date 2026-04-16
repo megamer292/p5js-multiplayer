@@ -31,6 +31,7 @@ function draw() {
 	if (keyIsDown(DOWN_ARROW)) {
 		py += 1;
 	}
+	socket.emit("pos", [px, py]);
 	for (let i=0; i<list.length;i++) {
 		circle(list[i][0], list[i][1], 10);
 	}
