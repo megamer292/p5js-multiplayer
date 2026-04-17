@@ -9,7 +9,7 @@ socket.on('connection', () => {
 
 socket.on("positions", listy=>{
 	list = listy;
-	alert(list)
+	alert("15")
 })
 
 function setup() {
