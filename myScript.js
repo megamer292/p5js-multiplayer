@@ -32,6 +32,7 @@ function draw() {
 		py += 1;
 	}
 	socket.emit("pos", [px, py]);
+	alert(list)
 	for (let key in list) {
 		alert(key);
 		circle(list[key][0], list[key][1], 10);
