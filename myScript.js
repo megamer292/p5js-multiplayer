@@ -1,6 +1,6 @@
 var px = 0;
 var py = 0;
-var list = [];
+var list = {};
 const socket = io("http://172.22.244.100:2077/");
 
 socket.on('connection', () => {
@@ -32,7 +32,7 @@ function draw() {
 		py += 1;
 	}
 	socket.emit("pos", [px, py]);
-	for (let i=0; i<list.length;i++) {
-		circle(list[i][0], list[i][1], 10);
+	for (let key in list) {
+		circle(list[key][0], list[key][1], 10);
 	}
 }
